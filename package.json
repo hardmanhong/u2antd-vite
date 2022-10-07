@@ -1,0 +1,39 @@
+{
+  "name": "u2antd",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/u2natd.umd.cjs",
+  "module": "./dist/u2natd.js",
+  "exports": {
+    ".": {
+      "import": "./dist/u2natd.js",
+      "require": "./dist/u2natd.umd.cjs"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "pnpm run build:types && vite build",
+    "build:types": "tsc --emitDeclarationOnly",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "antd": "^4.22.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
+    "@vitejs/plugin-react": "^2.0.1",
+    "less": "^4.1.3",
+    "ts-morph": "^15.1.0",
+    "typescript": "^4.6.4",
+    "vite": "^3.0.7",
+    "vite-plugin-imp": "^2.3.0",
+    "vite-plugin-style-inject": "^0.0.1"
+  }
+}
